@@ -5,7 +5,7 @@ const Output =(props)=>{
     return (
         <div>
             <OutputRow value={props.input} textSize={{fontSize: '20px'}}/>
-            <OutputRow value={props.result} textSize={{fontSize: '20px'}}/>
+            <OutputRow value={props.result}/>
         </div>
     );
 };

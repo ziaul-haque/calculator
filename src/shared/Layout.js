@@ -13,18 +13,27 @@ const Layout = () => {
                 try {
                     res = eval(input);
                 } catch (err) {
-                    setResult('Math error');
+                    res = 'Math error';
                 }
                 if (res === undefined) {
                     setResult('UNDEFINED');
                 } else {
-                    setResult(input + '=');
-                    setInput(res);
+                    setInput(input + '=');
+                    setResult(res);
                 }
             }
         } else if (value === 'C') {
-            setInput('0');
+            setInput('');
             setResult('');
+        } else if (value === 'DEL') {
+            const updateInput = input.slice(0, -1);
+            setInput(updateInput);
+            if (!updateInput) {
+                setResult('');
+            }
+        } 
+        else {
+            setInput(input + value);
         }
     };
 

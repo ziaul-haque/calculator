@@ -9,7 +9,7 @@ const OutputRow = (props)=>{
                 readOnly 
                 className='screen'
                 style={props.textSize}
-                value={props.value}    
+                value={props.value}
             />
         </div>
     );
